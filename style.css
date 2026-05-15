@@ -46,6 +46,20 @@ main > section {
     text-align: center;
 }
 
+.doctor-name {
+    display: block;
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .doctor-name {
+        font-size: 1.6rem;
+    }
+    .hero-split-content {
+        padding: 2rem 1rem;
+    }
+}
+
 .button-primary {
   background-color: var(--primary-color);
   color: white;
