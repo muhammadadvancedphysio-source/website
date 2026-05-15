@@ -13,6 +13,7 @@
 /* --- Global Styles --- */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 img {
@@ -27,6 +28,8 @@ body {
   background-color: var(--background-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
@@ -48,7 +51,6 @@ main > section {
 
 .doctor-name {
     display: block;
-    white-space: nowrap;
     font-size: 3rem;
     font-weight: 800;
     line-height: 1.1;
@@ -65,6 +67,9 @@ main > section {
 }
 
 @media (max-width: 480px) {
+    .doctor-name {
+        font-size: 2.2rem;
+    }
     .hero-split-content {
         padding: 2rem 1rem;
     }
@@ -346,7 +351,7 @@ main > section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
