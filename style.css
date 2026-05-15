@@ -49,12 +49,22 @@ main > section {
 .doctor-name {
     display: block;
     white-space: nowrap;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.certified-text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @media (max-width: 480px) {
-    .doctor-name {
-        font-size: 1.6rem;
-    }
     .hero-split-content {
         padding: 2rem 1rem;
     }
@@ -635,6 +645,12 @@ main > section {
 }
 
 @media (max-width: 768px) {
+    .doctor-name {
+        font-size: 2.5rem;
+    }
+    .certified-text {
+        font-size: 1.1rem;
+    }
     .hero .title {
         font-size: 2.5rem;
     }
@@ -655,5 +671,14 @@ main > section {
     }
     main > section {
         padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-name {
+        font-size: 2.1rem;
+    }
+    .certified-text {
+        font-size: 1rem;
     }
 }
