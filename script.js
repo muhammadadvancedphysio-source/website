@@ -53,4 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 
+    // --- Smart Sticky Header ---
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        const isNavOpen = hamburger && hamburger.classList.contains('open');
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100 && !isNavOpen) {
+            // Scrolling down
+            header.classList.add('header-hidden');
+        } else {
+            // Scrolling up or at the top
+            header.classList.remove('header-hidden');
+        }
+        lastScrollY = currentScrollY;
+    });
+
 });
